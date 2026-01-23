@@ -1,4 +1,4 @@
-import compassDirections from "../layers/compassDirections";
+import compassDirections from "./types/compassDirections";
 
 export default class Position {
   #x;
