@@ -1,4 +1,4 @@
-class Plateau {
+export default class PlateauSize {
   #x = 1;
   #y = 1;
 
@@ -8,5 +8,10 @@ class Plateau {
     this.#y = y;
   }
 
-  isWithinBounds(x, y) {}
+  isWithinBounds(x, y) {
+    const isWithinWidth = x <= this.#x && x >= 0;
+    const isWithinHeight = y <= this.#y && y >= 0;
+
+    return isWithinWidth && isWithinHeight;
+  }
 }
