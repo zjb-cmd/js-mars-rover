@@ -1,0 +1,3 @@
+![Image of the curiousity rover on Mars.](./img/curiosity.webp)
+
+Mars Rovers navigate the Plateau by following a sequence of commands. They can also use their cameras and robot arms to collect photographs and samples. This application is making their remote control safe, efficient and possible. 🚀
