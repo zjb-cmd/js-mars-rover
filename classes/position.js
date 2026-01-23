@@ -5,12 +5,16 @@ export default class Position {
   #y;
   #facingDirection;
 
-  set position(pos) {
-    // Format eg. "1 2 N"
-    const posArr = pos.split(" ");
-    this.#x = posArr[0];
-    this.#y = posArr[1];
-    this.#facingDirection = posArr[2];
+  set x(x) {
+    this.#x = compassDirections(x);
+  }
+
+  set y(y) {
+    this.#y = compassDirections(x);
+  }
+
+  set facingDirection(fD) {
+    this.#facingDirection = compassDirections(fD);
   }
 
   get x() {
@@ -23,5 +27,9 @@ export default class Position {
 
   get facingDirection() {
     return this.#facingDirection;
+  }
+
+  get position() {
+    return `${this.#x} ${this.#y} ${this.#facingDirection}`;
   }
 }
