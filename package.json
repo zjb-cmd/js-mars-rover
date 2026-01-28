@@ -7,7 +7,8 @@
   "type": "module",
   "main": "main.js",
   "scripts": {
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "start": "node main.js"
   },
   "devDependencies": {
     "jest": "^30.2.0"

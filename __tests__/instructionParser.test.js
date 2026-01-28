@@ -33,7 +33,7 @@ describe("InstructionParser class", () => {
   });
   test("parseInstruction method should return an array", () => {
     const instance = new InstructionParser();
-    const parsed = instance.parseInstruction("LRM");
+    const parsed = instance.parseInstruction("LRM").result;
     console.log(parsed);
 
     expect(typeof parsed).toBe("object");
@@ -42,7 +42,9 @@ describe("InstructionParser class", () => {
   test("Should include only allowed characters in the array", () => {
     const instance = new InstructionParser();
     const allowedChars = Object.values(Instructions).join("");
-    const result = instance.parseInstruction(getRandomInstructionStr(6, 0));
+    const result = instance.parseInstruction(
+      getRandomInstructionStr(6, 0),
+    ).result;
     console.log("result", result);
     const expected = result.filter((char) =>
       allowedChars.split("").includes(char),
@@ -55,7 +57,7 @@ describe("InstructionParser class", () => {
     const allowedChars = Object.values(Instructions).join("");
     const randomInstr = getRandomInstructionStr(6, 6);
     console.log("messy instruction", randomInstr);
-    const result = instance.parseInstruction(randomInstr);
+    const result = instance.parseInstruction(randomInstr).result;
     console.log("result", result);
     const expected = result.filter((char) =>
       allowedChars.split("").includes(char),

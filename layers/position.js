@@ -6,15 +6,15 @@ export default class Position {
   #facingDirection;
 
   set x(x) {
-    this.#x = compassDirections(x);
+    this.#x = x;
   }
 
   set y(y) {
-    this.#y = compassDirections(x);
+    this.#y = x;
   }
 
   set facingDirection(fD) {
-    this.#facingDirection = compassDirections(fD);
+    this.#facingDirection = fD;
   }
 
   get x() {
